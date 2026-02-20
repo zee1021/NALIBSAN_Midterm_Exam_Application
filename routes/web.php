@@ -1,5 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/shop', [ProductController::class, 'index']) -> name('shop.index');
+Route::get('/', [ProductController::class, 'index']);

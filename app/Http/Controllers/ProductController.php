@@ -1,4 +1,7 @@
+<?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -6,11 +9,26 @@ class ProductController extends Controller
     public function index()
     {
         $products = [
-            ['name' => 'Quantum X1 Smartphone', 'brand' => 'Aether', 'price' => 999, 'image' => 'https://example.com/images/quantum-x1.jpg', 'desc' => 'Next-gen neural processor and edge to edge display'],
-            ['name' => 'Nebula Pro Laptop', 'brand' => 'StellarTech', 'price' => 1499, 'image' => 'https://example.com/images/nebula-pro.jpg', 'desc' => 'Ultra-thin design with 12-hour battery life'],
-            ['name' => 'Titan mechanical keyboard', 'brand' => 'TitanTech', 'price' => 200, 'image' => 'https://example.com/images/titan-keyboard.jpg', 'desc' => 'Customizable RGB lighting and tactile feedback'],
-            ['name' => 'Vortex gaming mouse', 'brand' => 'Vortex', 'price' => 80, 'image' => 'https://example.com/images/vortex-mouse.jpg', 'desc' => 'Ergonomic design with adjustable DPI settings'],
+            [
+                'name' => 'CyberWatch Ultra',
+                'price' => '$399',
+                'image' => 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=400',
+                'desc' => 'Next-gen titanium casing with 72-hour battery.'
+            ],
+            [
+                'name' => 'Sonic Buds Pro',
+                'price' => '$199',
+                'image' => 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=400',
+                'desc' => 'Spatial audio with active noise cancellation.'
+            ],
+            [
+                'name' => 'Nebula Tablet',
+                'price' => '$899',
+                'image' => 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=400',
+                'desc' => 'Ultra-thin 14-inch OLED display for creators.'
+            ]
         ];
-        return view('products.index', compact('products'));    
+
+        return view('gadgets.index', compact('products'));
     }
 }
